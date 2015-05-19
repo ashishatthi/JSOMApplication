@@ -7,6 +7,6 @@ function GetCustomers()
 
         //*var clientContext = new SP.clientContext.get_current();
     //var oWeb = new clientContext;*///
-    var thisisTest = "";
+    var thisisTest = "Added value";
     
 }
