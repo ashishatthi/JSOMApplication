@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        @import "http://fonts.googleapis.com/css?family=Droid+Serif";
+        /* Above line is used for online google font */
+        h2 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        hr {
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #000;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        #button {
+            border: 1px solid #0c799e;
+            width: 250px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            border-radius: 3px;
+            background: linear-gradient(to bottom,#59d0f8 5%,#49c0e8 100%);
+            cursor: pointer;
+        }
+
+            #button:hover {
+                background: linear-gradient(to bottom,#49c0e8 5%,#59d0f8 100%);
+            }
+
+        input[type=text] {
+            margin-top: 5px;
+            margin-bottom: 20px;
+            width: 96%;
+            border-radius: 5px;
+            border: 0;
+            padding: 5px 0;
+        }
+
+        #name, #email {
+            padding-left: 10px;
+        }
+
+        input[type=submit] {
+            width: 30%;
+            border: 1px solid #59b4d4;
+            background: #0078a3;
+            color: #eee;
+            padding: 3px 0;
+            border-radius: 5px;
+            margin-left: 33%;
+            cursor: pointer;
+        }
+
+            input[type=submit]:hover {
+                border: 1px solid #666;
+                background: #555;
+                color: #fff;
+            }
+
+        .ui-dialog .ui-dialog-content {
+            padding: 2em;
+        }
+
+        div.container {
+            width: 960px;
+            height: 610px;
+            margin: 50px auto;
+            font-family: 'Droid Serif',serif;
+            position: relative;
+        }
+
+        div.main {
+            width: 320px;
+            margin-top: 35px;
+            float: left;
+            padding: 10px 55px 25px;
+            background-color: rgba(204,204,191,0.51);
+            border: 15px solid #fff;
+            box-shadow: 0 0 10px;
+            border-radius: 2px;
+            font-size: 13px;
+            text-align: center;
+        }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../js/metisMenu.min.js"></script>
+    <!-- Morris Charts JavaScript -->
+
+
+    <script src="../js/jquery-ui.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/sb-admin-2.js"></script>
+    <script type="text/javascript"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../css/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    
+    <link href="../css/jquery-ui.css" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ankit").on("click", function (event) {
+                event.preventDefault();
+                //console.log('click'); TO CHECK IF CLICK IS DETECTED
+                var iframe = $('<iframe frameborder="0" marginwidth="0" marginheight="0" width="400" height="400"></iframe>');
+                var dialog = $("<div></div>").append(iframe).appendTo("body").dialog({
+                    autoOpen: false,
+                    modal: true,
+                    show: "slide",
+                    hide:"puff",
+                    resizable: false,
+                    width: "auto",
+                    height: "auto",
+                    close: function () {
+                        iframe.attr("src", "");
+                    }
+                });
+                var src = $(this).attr("href");
+                iframe.attr({
+                    src: src
+                });
+                dialog.dialog("option", "title", "Your Title...").dialog("open");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--<div id="dialog" title="Dialog Form">
+        <form action="" method="post">
+            <label>Name:</label>
+            <input id="name" name="name" type="text" style="color:black">
+            <label>Email:</label>
+            <input id="email" name="email" type="text" style="color:black">
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>-->
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;height:149px;width:250px;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="NCR_logo.jpg" class="img-rounded" alt="Cinque Terre" width="79" height="72"></a>
+            </div>
+            <!-- /.navbar-header -->
+
+            
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Actions<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="forms.html"><i class="fa fa-user fa-fw"></i>Employee Details</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper" style="margin-top:-149px;">
+            <div class="row">
+                <div class="col-xs-9">
+                    <h1 class="page-header">Leave Application Dashboard</h1>
+
+                </div>
+                <div class="col-lg-3">
+                    <ul class="nav navbar-top-links navbar-right">
+                        
+                        <!-- /.dropdown -->
+                        
+                        <!-- /.dropdown -->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <i class="fa fa-comment fa-fw"></i> New Comment
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <i class="fa fa-tasks fa-fw"></i> New Task
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a class="text-center" href="#">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- /.dropdown-alerts -->
+                        </li>
+                        <!-- /.dropdown -->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                                </li>
+                            </ul>
+                            <!-- /.dropdown-user -->
+                        </li>
+                        <!-- /.dropdown -->
+                    </ul>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">26</div>
+                                    <div><b>Casual/Sick Leave</b></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="grid.html" class="ankit">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">12</div>
+                                    <div><b>Annual Leave</b></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="forms.html" class="ankit">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">124</div>
+                                    <div><b>Task Pending</b></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="Approve_reject.html" class="ankit">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-support fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">13</div>
+                                    <div><b>Public Holidays</b></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="login.html" class="ankit">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        Actions
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Action</a>
+                                        </li>
+                                        <li><a href="#">Another action</a>
+                                        </li>
+                                        <li><a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body embed-responsive embed-responsive-16by9">
+                            <iframe src="TestCalender.html" class="embed-responsive-item" style="width:1005px;height:794px;"></iframe>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                  
+                    <!-- /.panel -->
+                    
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+                
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+   
+
+</body>
+
+</html>

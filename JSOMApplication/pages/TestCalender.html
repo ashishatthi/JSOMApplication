@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link type="text/css" href='../css/fullcalendar.css' rel='stylesheet' />
+    <link type="text/css" href='../css/fullcalendar.print.css' rel='stylesheet' media='print' />
+   <!-- <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <script type="text/javascript" src='../js/moment.min.js'></script>
+    <script type="text/javascript" src='../js/jquery.min.js'></script>
+    <script type="text/javascript" src='../js/fullcalendar.min.js'></script>
+    <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+<script>
+		
+		
+				
+	$(document).ready(function() {
+		
+		 var newEvent =[
+							{
+								id: 30,
+								title: "New Event",
+								start: '2015-05-15',
+								end: '2015-05-15'
+							}
+					];
+		
+		window.addStaticSource = function() {
+                $('#calendar').fullCalendar('addEventSource', newEvent);
+				}
+		window.removeEvent = function() {
+             $('#calendar').fullCalendar('removeEvents', 30);
+		}
+		window.openDialog=function(){ $( "#dialog" ).dialog();
+		}
+		
+		
+		
+		$('#calendar').fullCalendar({
+			dayClick: function() {
+				alert('a day has been clicked!');
+			},
+			eventClick: function(calEvent, jsEvent, view) {
+				
+				var endDate;
+				if(calEvent.end!=null)
+				{
+					alert('Event: ' + calEvent.title +",Start Date :"+ calEvent.start._i +",End Date :"+ calEvent.end._i);
+				}
+				else
+				{
+					alert('Event: ' + calEvent.title +",Start Date :"+ calEvent.start._i +",End Date :"+ calEvent.start._i);
+				}
+				
+				$(this).css('border-color', 'red');
+
+			},
+			eventDrop: function(event, delta, revertFunc,jsEvent, ui, view) {
+				if (!confirm("Are you sure about this change your scheduled leave?")) {
+					//revertFunc();
+				}
+			},
+			header: {
+				left: 'prevYear prev,next nextYear today ',
+				center: 'title',
+				right: 'month,agendaWeek'
+			},
+			
+			today:    'aaa',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			eventSources: 
+			[
+				{
+					events: [
+								{
+									id:'1',
+									title: 'Ashish',
+									start: '2015-05-01',
+									end: '2015-05-03'
+								},
+								{
+									id:'2',
+									title: 'Bitopan',
+									start: '2015-05-15',
+									end: '2015-05-15'
+								},
+								{
+									id:'3',
+									title: 'Bitopan',
+									start: '2015-06-10',
+									end: '2015-06-12'
+								}
+							],
+							color: 'blue'
+				},
+				{
+					events: [
+								{
+									id:'4',
+									title: 'Ankit',
+									start: '2015-05-01',
+									end: '2015-05-10'
+								},
+								{
+									id:'5',
+									title: 'Poonam',
+									start: '2015-05-20',
+									end: '2015-05-25'
+								}
+							],
+							color: 'black'
+				},
+				
+				{
+					events: [
+								{
+									id:'6',
+									title: 'Bank Holiday',
+									start: '2015-05-27',
+									end: '2015-05-27',
+									rendering: 'background'
+								},
+							],
+							color: 'black'
+				}
+			]
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='calendar'></div>
+	
+	<input type='button' value='add test event' onclick='addStaticSource()' />
+	<input type='button' value='remove test event' onclick='removeEvent()' />
+	<input type='button' value='Open Dialog' onclick='openDialog()' />
+	
+	<div id="dialog" title="Basic dialog">
+		
+	</div>
+
+</body>
+</html>

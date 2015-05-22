@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link href="/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- DataTables Responsive CSS -->
+    <link href="/bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript">
+
+
+$(document).ready(function(){
+
+    $(".hover tr").live("mouseenter", function () {
+        $(this).find("td:last-child").html('<a href="javascript:void(0);" onClick="editrow(' + $(this).attr("id") + ')"><img src="acp.jpg" /></a>&nbsp;&nbsp;<a href="javascript:void(0);" onClick="deleterow(' + $(this).attr("id") + ')"><img src="rej.jpg" /></a>');
+
+    });//
+
+
+
+
+    $(".hover tr").live("mouseleave", function () {
+
+        $(this).find("td:last-child").html("&nbsp;");
+
+    });
+
+ $(".hover tr").live("click",function(event){
+
+        if(event.target.nodeName == "TD"){
+
+            alert("You can track TD click event too....Isnt it amazing !!!");
+
+        }
+
+    });
+
+});
+
+    editrow = function (itemId){
+
+        alert("You clicked 'Edit' link with row id :"+ itemId);
+
+    }
+
+    deleterow = function (itemId){
+
+        alert("You clicked 'Delete' link with row id :"+ itemId);
+
+    }
+
+    </script>
+
+    <style type="text/css">
+        table {
+            font-family: verdana;
+            font-size: 12px;
+        }
+
+            table th {
+                text-align: left;
+                background: #D3D3D3;
+                padding: 2px;
+            }
+
+            table tr:hover {
+                background: #EFEFEF;
+               
+            }
+
+            table tr {
+                text-align: left;
+            }
+
+            table td {
+                padding: 5px;
+            }
+
+                table td a {
+                    color: #0454B5;
+                }
+    </style>
+</head>
+<body>
+    <table width="100%" border="0" class="hover" style="border:double;">
+
+      
+
+            <th>First Name</th>
+
+            <th>Last Name</th>
+
+            <th width="20%">Action</th>
+
+           
+
+        <tr id="100">
+
+            <td>Amit</td>
+
+            <td>Patil</td>
+
+            <td></td>
+
+        </tr>
+
+        <tr id="101">
+
+            <td>Amit</td>
+
+            <td>Patil</td>
+
+            <td></td>
+
+        </tr>
+
+        <tr id="102">
+
+            <td>Amit</td>
+
+            <td>Patil</td>
+
+            <td></td>
+
+        </tr>
+
+        <tr id="103">
+
+            <td>Amit</td>
+
+            <td>Patil</td>
+
+            <td></td>
+
+        </tr>
+
+        <tr id="104">
+
+            <td>Amit</td>
+
+            <td>Patil</td>
+
+            <td></td>
+
+        </tr>
+
+        <tr id="105">
+
+            <td>Amit</td>
+
+            <td>Patil</td>
+
+            <td></td>
+
+        </tr>
+
+    </table>
+</body>
+</html>
