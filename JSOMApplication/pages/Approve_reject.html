@@ -27,7 +27,7 @@
 $(document).ready(function(){
 
     $(".hover tr").live("mouseenter", function () {
-        $(this).find("td:last-child").html('<a id="lnkacp"></a>&nbsp;&nbsp;<a id="lnkrej"><img src="rej.jpg" /></a>');
+        $(this).find("td:last-child").html('<a id="lnkacp" href="javascript:void(0);" ><img src="acp.jpg" /></a>&nbsp;&nbsp;<a id="lnkrej" href="javascript:void(0);"><img src="rej.jpg" /></a>');
 
     });//
 
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
     });
     document.querySelector('#lnkacp').onclick = function () {
-        
+        alert();
         swal({
             title: "Are you sure?",
             text: "You will not be able to recover this imaginary file!",
