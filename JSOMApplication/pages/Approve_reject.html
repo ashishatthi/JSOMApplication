@@ -27,7 +27,7 @@
 $(document).ready(function(){
 
     $(".hover tr").live("mouseenter", function () {
-        $(this).find("td:last-child").html('<a id="lnkacp" href="javascript:void(0);" onClick="editrow(' + $(this).attr("id") + ')"><img src="acp.jpg" /></a>&nbsp;&nbsp;<a id="lnkrej" href="javascript:void(0);" onClick="deleterow(' + $(this).attr("id") + ')"><img src="rej.jpg" /></a>');
+        $(this).find("td:last-child").html('<a id="lnkacp" href="javascript:void(0);" ><img src="acp.jpg" /></a>&nbsp;&nbsp;<a id="lnkrej" href="javascript:void(0);"><img src="rej.jpg" /></a>');
 
     });//
 
