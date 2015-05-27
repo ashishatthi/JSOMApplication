@@ -142,8 +142,8 @@
         $(document).ready(function () {
             $(".ankit").on("click", function (event) {
                 event.preventDefault();
-                //console.log('click'); TO CHECK IF CLICK IS DETECTED
-                var iframe = $('<iframe frameborder="0" marginwidth="0" marginheight="0" width="400" height="400"></iframe>');
+                
+                var iframe = $('<iframe frameborder="0" scrolling="no" marginwidth="0" marginheight="0" width="600" height="600"></iframe>');
                 var dialog = $("<div></div>").append(iframe).appendTo("body").dialog({
                     autoOpen: false,
                     modal: true,
