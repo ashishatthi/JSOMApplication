@@ -2,8 +2,11 @@
 <html lang="en">
 
 <head>
+
+   
     <style type="text/css">
         @import "http://fonts.googleapis.com/css?family=Droid+Serif";
+        
         /* Above line is used for online google font */
         h2 {
             text-align: center;
@@ -97,8 +100,8 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../js/metisMenu.min.js"></script>
     <!-- Morris Charts JavaScript -->
-
-
+    <script src="../js/jquery.ffform.js"></script>
+    <link href="../css/demo.css" rel="stylesheet" />
     <script src="../js/jquery-ui.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="../js/sb-admin-2.js"></script>
@@ -174,278 +177,283 @@
         </form>
     </div>-->
     <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;height:149px;width:250px;">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><img src="NCR_logo.jpg" class="img-rounded" alt="Cinque Terre" width="79" height="72"></a>
-            </div>
-            <!-- /.navbar-header -->
-
-            
-            <!-- /.navbar-top-links -->
-
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        
-                        
-                        <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Actions<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="forms.html"><i class="fa fa-user fa-fw"></i>Employee Details</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        
-                    </ul>
+        <section id="getintouch" class="fadeInRightBig animated">
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;height:149px;width:250px;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="NCR_logo.jpg" class="img-rounded" alt="Cinque Terre" width="79" height="72"></a>
                 </div>
-                <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
-        </nav>
+                <!-- /.navbar-header -->
+                <!-- /.navbar-top-links -->
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
 
-        <div id="page-wrapper" style="margin-top:-149px;">
-            <div class="row">
-                <div class="col-xs-9">
-                    <h1 class="page-header">Leave Application Dashboard</h1>
 
-                </div>
-                <div class="col-lg-3">
-                    <ul class="nav navbar-top-links navbar-right">
-                        
-                        <!-- /.dropdown -->
-                        
-                        <!-- /.dropdown -->
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-alerts">
-                                <li>
-                                    <a href="#">
-                                        <div>
-                                            <i class="fa fa-comment fa-fw"></i> New Comment
-                                            <span class="pull-right text-muted small">4 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="#">
-                                        <div>
-                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                            <span class="pull-right text-muted small">12 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="#">
-                                        <div>
-                                            <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                            <span class="pull-right text-muted small">4 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="#">
-                                        <div>
-                                            <i class="fa fa-tasks fa-fw"></i> New Task
-                                            <span class="pull-right text-muted small">4 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="#">
-                                        <div>
-                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                            <span class="pull-right text-muted small">4 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a class="text-center" href="#">
-                                        <strong>See All Alerts</strong>
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- /.dropdown-alerts -->
-                        </li>
-                        <!-- /.dropdown -->
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li>
-                                    <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                                </li>
-                            </ul>
-                            <!-- /.dropdown-user -->
-                        </li>
-                        <!-- /.dropdown -->
-                    </ul>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-comments fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
-                                    <div><b>Casual/Sick Leave</b></div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="grid.html" class="ankit">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
+                            <li>
+                                <a href="#"><i class="fa fa-wrench fa-fw"></i> Actions<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="forms.html"><i class="fa fa-user fa-fw"></i>Employee Details</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+
+                        </ul>
                     </div>
+                    <!-- /.sidebar-collapse -->
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-tasks fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
-                                    <div><b>Annual Leave</b></div>
-                                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+        </section>
+            <div id="page-wrapper" style="margin-top:-149px;">
+                
+                    <div class="row">
+                        <section id="getintouch" class="fadeInLeftBig animated">
+                            <div class="col-xs-9">
+                                <h1 class="page-header">Leave Application Dashboard</h1>
                             </div>
-                        </div>
-                        <a href="forms.html" class="ankit">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-shopping-cart fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
-                                    <div><b>Task Pending</b></div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="Approve_reject.html" class="ankit">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-support fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div><b>Public Holidays</b></div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="login.html" class="ankit">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Actions
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Action</a>
+                        </section>
+                            <section id="getintouch" class="fadeInUpBig animated" style="z-index:2">
+                                <div class="col-lg-3">
+                                    <ul class="nav navbar-top-links navbar-right">
+
+                                        <!-- /.dropdown -->
+                                        <!-- /.dropdown -->
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-alerts">
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <i class="fa fa-comment fa-fw"></i> New Comment
+                                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <i class="fa fa-tasks fa-fw"></i> New Task
+                                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a class="text-center" href="#">
+                                                        <strong>See All Alerts</strong>
+                                                        <i class="fa fa-angle-right"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- /.dropdown-alerts -->
                                         </li>
-                                        <li><a href="#">Another action</a>
+                                        <!-- /.dropdown -->
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-user">
+                                                <li>
+                                                    <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                                                </li>
+                                            </ul>
+                                            <!-- /.dropdown-user -->
                                         </li>
-                                        <li><a href="#">Something else here</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
-                                        </li>
+                                        <!-- /.dropdown -->
                                     </ul>
                                 </div>
+                            </section>
+                            <!-- /.col-lg-12 -->
+</div>
+               
+                    <!-- /.row -->
+                    <section id="getintouch" class="rotateInUpLeft animated" style="z-index:1">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <i class="fa fa-comments fa-5x"></i>
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge">26</div>
+                                                <div><b>Casual/Sick Leave</b></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="grid.html" class="ankit">
+                                        <div class="panel-footer">
+                                            <span class="pull-left">View Details</span>
+                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="panel panel-green">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <i class="fa fa-tasks fa-5x"></i>
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge">12</div>
+                                                <div><b>Privilege Leave</b></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="forms.html" class="ankit">
+                                        <div class="panel-footer">
+                                            <span class="pull-left">View Details</span>
+                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="panel panel-yellow">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <i class="fa fa-shopping-cart fa-5x"></i>
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge">124</div>
+                                                <div><b>Task Pending</b></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="Approve_reject.html" class="ankit">
+                                        <div class="panel-footer">
+                                            <span class="pull-left">View Details</span>
+                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="panel panel-red">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <i class="fa fa-support fa-5x"></i>
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge">13</div>
+                                                <div><b>Public Holidays</b></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="login.html" class="ankit">
+                                        <div class="panel-footer">
+                                            <span class="pull-left">View Details</span>
+                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body embed-responsive embed-responsive-16by9">
-                            <iframe src="TestCalender.html" class="embed-responsive-item" style="width:1005px;height:794px;"></iframe>
+                    </section>
+                    <!-- /.row -->
+                <section id="getintouch" class="rotateInUpRight animated">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                                Actions
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu pull-right" role="menu">
+                                                <li>
+                                                    <a href="#">Action</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Another action</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Something else here</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#">Separated link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body embed-responsive embed-responsive-16by9">
+                                    <iframe src="TestCalender.html" class="embed-responsive-item" style="width:1005px;height:794px;"></iframe>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                            <!-- /.panel -->
+                            <!-- /.panel -->
                         </div>
-                        <!-- /.panel-body -->
+                        <!-- /.col-lg-8 -->
+                        <!-- /.col-lg-4 -->
                     </div>
-                    <!-- /.panel -->
-                  
-                    <!-- /.panel -->
-                    
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-8 -->
-                
-                <!-- /.col-lg-4 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
-
-    </div>
+                </section>
+                    <!-- /.row -->
+</div>
+            <!-- /#page-wrapper -->
+</div>
     <!-- /#wrapper -->
 
     <!-- jQuery -->

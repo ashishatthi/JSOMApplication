@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\demo.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\fullcalendar.css" />
     <Content Include="css\fullcalendar.print.css" />
@@ -66,11 +67,13 @@
     <Content Include="css\sb-admin-2.css" />
     <Content Include="First.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="Images\ui-icons_ffffff_256x240.png" />
     <Content Include="index.html" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\fullcalendar.min.js" />
     <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.ffform.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\metisMenu.min.js" />
     <Content Include="js\moment.min.js" />
@@ -79,6 +82,7 @@
     <Content Include="pages\Approve_reject.html" />
     <Content Include="pages\Images\ui-icons_ffffff_256x240.png" />
     <Content Include="pages\index.html" />
+    <Content Include="pages\Leave_application.html" />
     <Content Include="pages\NCR_logo.jpg" />
     <Content Include="pages\rej.jpg" />
     <Content Include="pages\TestCalender.html" />
