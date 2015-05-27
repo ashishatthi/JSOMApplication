@@ -21,46 +21,8 @@
 
     <script type="text/javascript">
 
-        document.querySelector('#lnkacp').onclick = function () {
-            swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: '#DD6B55',
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: "No, cancel plx!",
-                closeOnConfirm: false,
-                closeOnCancel: false
-            },
-            function (isConfirm) {
-                if (isConfirm) {
-                    swal("Deleted!", "Your imaginary file has been deleted!", "success");
-                } else {
-                    swal("Cancelled", "Your imaginary file is safe :)", "error");
-                }
-            });
-        };
-        document.querySelector('#lnkrej').onclick = function () {
-            swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: '#DD6B55',
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: "No, cancel plx!",
-                closeOnConfirm: false,
-                closeOnCancel: false
-            },
-            function (isConfirm) {
-                if (isConfirm) {
-                    swal("Deleted!", "Your imaginary file has been deleted!", "success");
-                } else {
-                    swal("Cancelled", "Your imaginary file is safe :)", "error");
-                }
-            });
-        };
+        
+       
 $(document).ready(function(){
 
     $(".hover tr").live("mouseenter", function () {
@@ -76,36 +38,70 @@ $(document).ready(function(){
         $(this).find("td:last-child").html("&nbsp;");
 
     });
+    document.querySelector('#lnkacp').onclick = function () {
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#DD6B55',
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: "No, cancel plx!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+        function (isConfirm) {
+            if (isConfirm) {
+                swal("Deleted!", "Your imaginary file has been deleted!", "success");
+            } else {
+                swal("Cancelled", "Your imaginary file is safe :)", "error");
+            }
+        });
+    };
+    document.querySelector('#lnkrej').onclick = function () {
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#DD6B55',
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: "No, cancel plx!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+        function (isConfirm) {
+            if (isConfirm) {
+                swal("Deleted!", "Your imaginary file has been deleted!", "success");
+            } else {
+                swal("Cancelled", "Your imaginary file is safe :)", "error");
+            }
+        });
+    };
+ //$(".hover tr").live("click",function(event){
 
- $(".hover tr").live("click",function(event){
+ //       if(event.target.nodeName == "TD"){
 
-        if(event.target.nodeName == "TD"){
+ //           alert("You can track TD click event too....Isnt it amazing !!!");
 
-            alert("You can track TD click event too....Isnt it amazing !!!");
+ //       }
 
-        }
-
-    });
+ //   });
 
 });
 
-    editrow = function (itemId){
-7
-        alert("You clicked 'Edit' link with row id :"+ itemId);
+//    editrow = function (itemId){
+//7
+//        alert("You clicked 'Edit' link with row id :"+ itemId);
 
-    }
+//    }
 
-    deleterow = function (itemId){
+    //deleterow = function (itemId){
 
-        alert("You clicked 'Delete' link with row id :"+ itemId);
+    //    alert("You clicked 'Delete' link with row id :"+ itemId);
 
-    }
-    function Ankit() {
-
-        $("#tbbb").hide();
-        $("#fdsfds").show();
-
-    }
+    //}
+   
     </script>
 
     <style type="text/css">
