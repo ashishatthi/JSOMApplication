@@ -6,38 +6,27 @@
     <link rel="stylesheet" href="../css/example.css">
     <script src="../js/sweetalert-dev.js"></script>
     <link rel="stylesheet" href="../css/sweetalert.css">
-    
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link href="/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- DataTables Responsive CSS -->
+    <link href="/bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript">
 
-        document.querySelector('a.lnkacp').onclick = function () {
-            alert();
-            swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: '#DD6B55',
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: "No, cancel plx!",
-                closeOnConfirm: false,
-                closeOnCancel: false
-            },
-            function (isConfirm) {
-                if (isConfirm) {
-                    swal("Deleted!", "Your imaginary file has been deleted!", "success");
-                } else {
-                    swal("Cancelled", "Your imaginary file is safe :)", "error");
-                }
-            });
-        };
+        
        
 $(document).ready(function(){
 
     $(".hover tr").live("mouseenter", function () {
-        $(this).find("td:last-child").html('<a class="lnkacp" href="javascript:void(0);" ><img src="acp.jpg" /></a>&nbsp;&nbsp;<a id="lnkrej" href="javascript:void(0);"><img src="rej.jpg" /></a>');
+        $(this).find("td:last-child").html('<a id="lnkacp" href="javascript:void(0);" onClick="editrow(' + $(this).attr("id") + ')"><img src="acp.jpg" /></a>&nbsp;&nbsp;<a id="lnkrej" href="javascript:void(0);" onClick="deleterow(' + $(this).attr("id") + ')"><img src="rej.jpg" /></a>');
 
     });//
 
@@ -49,32 +38,69 @@ $(document).ready(function(){
         $(this).find("td:last-child").html("&nbsp;");
 
     });
-   
-    //document.querySelector('#lnkrej').onclick = function () {
-    //    swal({
-    //        title: "Are you sure?",
-    //        text: "You will not be able to recover this imaginary file!",
-    //        type: "warning",
-    //        showCancelButton: true,
-    //        confirmButtonColor: '#DD6B55',
-    //        confirmButtonText: 'Yes, delete it!',
-    //        cancelButtonText: "No, cancel plx!",
-    //        closeOnConfirm: false,
-    //        closeOnCancel: false
-    //    },
-    //    function (isConfirm) {
-    //        if (isConfirm) {
-    //            swal("Deleted!", "Your imaginary file has been deleted!", "success");
-    //        } else {
-    //            swal("Cancelled", "Your imaginary file is safe :)", "error");
-    //        }
-    //    });
-    //};
- 
+    document.querySelector('#lnkacp').onclick = function () {
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#DD6B55',
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: "No, cancel plx!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+        function (isConfirm) {
+            if (isConfirm) {
+                swal("Deleted!", "Your imaginary file has been deleted!", "success");
+            } else {
+                swal("Cancelled", "Your imaginary file is safe :)", "error");
+            }
+        });
+    };
+    document.querySelector('#lnkrej').onclick = function () {
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#DD6B55',
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: "No, cancel plx!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+        function (isConfirm) {
+            if (isConfirm) {
+                swal("Deleted!", "Your imaginary file has been deleted!", "success");
+            } else {
+                swal("Cancelled", "Your imaginary file is safe :)", "error");
+            }
+        });
+    };
+ $(".hover tr").live("click",function(event){
+
+        if(event.target.nodeName == "TD"){
+
+            alert("You can track TD click event too....Isnt it amazing !!!");
+
+        }
+
+    });
 
 });
 
+    editrow = function (itemid){
 
+        alert("you clicked 'edit' link with row id :"+ itemid);
+
+    }
+
+    deleterow = function (itemid){
+
+        alert("you clicked 'delete' link with row id :"+ itemid);
+
+    }
    
     </script>
 
@@ -109,7 +135,7 @@ $(document).ready(function(){
     </style>
 </head>
 <body>
-
+    <input id="srt1" type="button" value="shruti" onclick="Ankit();" />
     <table id="tbbb" width="100%" border="0" class="hover" style="border:double;">
 
       
