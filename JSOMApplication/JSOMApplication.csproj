@@ -59,12 +59,14 @@
   <ItemGroup>
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\demo.css" />
+    <Content Include="css\example.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\fullcalendar.css" />
     <Content Include="css\fullcalendar.print.css" />
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\metisMenu.min.css" />
     <Content Include="css\sb-admin-2.css" />
+    <Content Include="css\sweetalert.css" />
     <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
     <Content Include="css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
@@ -95,6 +97,7 @@
     <Content Include="js\metisMenu.min.js" />
     <Content Include="js\moment.min.js" />
     <Content Include="js\sb-admin-2.js" />
+    <Content Include="js\sweetalert-dev.js" />
     <Content Include="pages\acp.jpg" />
     <Content Include="pages\Approve_reject.html" />
     <Content Include="pages\Images\arrow_error.png" />
