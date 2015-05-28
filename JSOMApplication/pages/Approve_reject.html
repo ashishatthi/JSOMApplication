@@ -14,7 +14,7 @@
         
        
 $(document).ready(function(){
-    editrow = function (itemId) {
+    approverow = function (itemId) {
         swal({
             title: "Are you sure?",
             text: "The Leave will be set as Approved",
@@ -34,8 +34,28 @@ $(document).ready(function(){
             }
         });
     };
+    rejectrow = function (itemId) {
+        swal({
+            title: "Are you sure?",
+            text: "The Leave will be set as Rejected",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#00c200',
+            confirmButtonText: 'Yes, Rejected it!',
+            cancelButtonText: "No, cancel it!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+        function (isConfirm) {
+            if (isConfirm) {
+                swal("Rejected!", "The Leave has been Rejected!", "success");
+            } else {
+                swal("Cancelled", "The Leave has not been Rejected!", "error");
+            }
+        });
+    };
     $(".hover tr").live("mouseenter", function () {
-        $(this).find("td:last-child").html('<a id="lnkacp" href="javascript:void(0);" onClick="editrow(' + $(this).attr("id") + ')"><img src="acp.jpg" /></a>&nbsp;&nbsp;<a id="lnkrej" href="javascript:void(0);" onClick="deleterow(' + $(this).attr("id") + ')"><img src="rej.jpg" /></a>');
+        $(this).find("td:last-child").html('<a id="lnkacp" href="javascript:void(0);" onClick="approverow(' + $(this).attr("id") + ')"><img src="acp.jpg" /></a>&nbsp;&nbsp;<a id="lnkrej" href="javascript:void(0);" onClick="rejectrow(' + $(this).attr("id") + ')"><img src="rej.jpg" /></a>');
 
     });//
 
