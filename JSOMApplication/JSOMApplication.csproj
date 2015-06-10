@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\chosen-sprite.png" />
+    <Content Include="css\chosen.css" />
     <Content Include="css\demo.css" />
     <Content Include="css\example.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -67,6 +69,7 @@
     <Content Include="css\metisMenu.min.css" />
     <Content Include="css\sb-admin-2.css" />
     <Content Include="css\sweetalert.css" />
+    <Content Include="css\ui-lightness.css" />
     <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
     <Content Include="css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
@@ -88,9 +91,13 @@
     <Content Include="Images\ui-icons_ffffff_256x240.png" />
     <Content Include="index.html" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\chosen.jquery.js" />
     <Content Include="js\fullcalendar.min.js" />
+    <Content Include="js\jquery-1.10.2.js" />
     <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="js\jquery-1.8.2.js" />
     <Content Include="js\jquery-ui-1.8.19.custom.min.js" />
+    <Content Include="js\jquery-ui.js" />
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\jquery.ffform.js" />
     <Content Include="js\jquery.min.js" />
@@ -533,6 +540,7 @@
     <Content Include="pages\index.html" />
     <Content Include="pages\leaveApplication.html" />
     <Content Include="pages\NCR_logo.jpg" />
+    <Content Include="pages\Public_holidays.html" />
     <Content Include="pages\rej.jpg" />
     <Content Include="pages\TestCalender.html" />
     <Content Include="Web.config" />
