@@ -85,6 +85,11 @@
     <Content Include="css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
     <Content Include="css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
     <Content Include="css\ui-lightness\jquery-ui-1.8.19.custom.css" />
+    <Content Include="docsupport\chosen.png" />
+    <Content Include="docsupport\oss-credit.png" />
+    <Content Include="docsupport\prism.css" />
+    <Content Include="docsupport\prism.js" />
+    <Content Include="docsupport\style.css" />
     <Content Include="First.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="HtmlPage1.html" />
