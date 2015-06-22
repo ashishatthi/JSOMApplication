@@ -536,6 +536,7 @@
     <Content Include="pages\bower_components\raphael\raphael-min.js" />
     <Content Include="pages\bower_components\raphael\raphael.js" />
     <Content Include="pages\Employee_details.html" />
+    <Content Include="pages\Employee_list.html" />
     <Content Include="pages\Images\arrow_error.png" />
     <Content Include="pages\Images\bg.png" />
     <Content Include="pages\Images\bg_form.png" />
